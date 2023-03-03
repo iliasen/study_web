@@ -16,7 +16,29 @@
 
     <table height="1000" border="1px">
         <tr>
-            <td width="350"></td>
+            <td width="350">
+                <form action="#" method="get" enctype="multipart/form-data">
+                    <div>
+                        <input type="text" name="username" value="">
+                        <input type="password" name="userpass" value="">
+                    </div>
+                    <br>
+                    <div>
+                        Выберите пиво:
+                        <p>
+                            <input checked type="radio" name="beer" value="lager">Свелое
+                            <br>
+                            <input type="radio" name="beer" value="dark">Тёмное
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="box" value="">Никакое
+                        </p>
+                    </div>
+                </form>
+            </td>
             <td width="950"></td>
             <td width="350"></td>
         </tr>
