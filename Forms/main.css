@@ -1,0 +1,49 @@
+h1{
+    color: darkgray;
+    width: 95%;
+    height: 100px;
+    text-align: center;
+}
+
+footer{
+    position: absolute;
+    width: 95%;
+    height: 100px;
+    text-align: center;
+    margin: 40px 0 0 40px;
+}
+
+.img1 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 0px;
+    left: 200px;
+}
+
+.first_div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 5px;
+
+}
+
+.secound_div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 30px;
+}
+
+aside {
+    padding: 0;
+    float: right;
+    font-size: 8em;
+    font-family: SansSerif;
+    color: brown;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+}
+
+div.td{
+    padding: 0;
+    transform: rotate(30deg);
+}

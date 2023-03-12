@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мегастрой</title>
+    <link rel="icon" href="res\logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <img src="res/shop.svg" class="img1">
+    <h1>
+        <font size="15" face="segoe print">Мегастрой</font>
+    </h1>
+
+    <p>Просто текст</p>
+
+    <table height="1000" border="1px">
+        <tr>
+            <td width="350">
+                <form action="#" method="get" enctype="multipart/form-data">
+                    <div>
+                        <div class="first_div">
+                            <p>Введите имя</p>
+                            <input placeholder="Иванов Иван" type="text" name="username" value=""><!--тег disabled блокирует поле-->
+                        </div>
+                        <div class="secound_div">
+                            <p>Введите пароль</p>
+                            <input tabindex="1" type="password" name="userpass" value=""><!-- tabindex на скоьлко пунктов прескочит формы нажав tab-->
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        Выберите пиво:
+                        <p>
+                            <input checked type="radio" name="beer" value="lager">Свелое
+                            <br>
+                            <input type="radio" name="beer" value="dark">Тёмное
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="box" value="">Никакое
+                            <br>
+                            <input type="checkbox" name="box1" value="">Никакое1
+                            <br>
+                            <input type="checkbox" name="box2" value="">Никакое2
+                        </p>
+                    </div>
+                    <div>
+                        Выберите фото:<br>
+                        <p>
+                            <input type="file" name="img" value=""><!--Выбор файла-->
+                        </p>
+                    </div>
+
+                    <div>
+                        <textarea name="text" cols="30" rows="10"></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <select name="color" > <!--выпадающий список, с помощью атрибута multiply можно сделать множественную выборку зажав ctcl -->
+                            <option value="red">Красный</option>
+                            <option selected  value="blue">Синий</option><!--selected элемент показывается первым в списке-->
+                            <option value="green">Зелёный</option>
+                            <option value="white">Белый</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit">Жмякни</button> <!--submit - все данные отпраятся, reset поля очищаются-->
+                    </div>
+                </form>
+            </td>
+            <td width="950">
+                <div class="td">
+                    Cодержание данной ячейки
+                </div>
+            </td>
+            <td width="350">
+                <aside>
+                    Какой то текст
+                </aside>
+            </td>
+        </tr>
+    </table>
+
+<footer >Конец</footer>
+</body>
+</html>
