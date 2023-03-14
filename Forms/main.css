@@ -1,3 +1,14 @@
+body{
+    width: 1800px;
+    height: 900px;
+    /*background-color: yellow;*/
+}
+
+div.container{
+    display: flex;
+    margin: 10px    ;
+}
+
 h1{
     color: darkgray;
     width: 95%;
@@ -6,7 +17,7 @@ h1{
 }
 
 footer{
-    position: absolute;
+    position: relative;
     width: 95%;
     height: 100px;
     text-align: center;
@@ -17,33 +28,40 @@ footer{
     position: absolute;
     width: 200px;
     height: 150px;
-    top: 0px;
-    left: 200px;
+    margin: 10px;
+    /*margin-left: 200px;*/
 }
 
-.first_div{
+div.first_collum{
+    /*background-color: dimgrey;*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+div.secound_collum{
+    width: 700px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.text_form{
     display: flex;
     justify-content: space-between;
     margin: 0px 10px 5px;
-
-}
-
-.secound_div{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 10px 30px;
+    padding-right: 300px;
 }
 
 aside {
-    padding: 0;
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
     float: right;
-    font-size: 8em;
-    font-family: SansSerif;
-    color: brown;
-    box-shadow: inset 5px 0 5px -5px #29627e;
 }
-
-div.td{
-    padding: 0;
-    transform: rotate(30deg);
+div>h2{
+    margin-bottom: 20px;
+    font-family: Candara;
+    color: dimgrey;
 }
