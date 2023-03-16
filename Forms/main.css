@@ -29,11 +29,11 @@ footer{
     width: 200px;
     height: 150px;
     margin: 10px;
-    /*margin-left: 200px;*/
+
 }
 
 div.first_collum{
-    /*background-color: dimgrey;*/
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
