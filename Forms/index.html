@@ -9,82 +9,96 @@
 </head>
 
 <body>
-    <img src="res/left-img.png" class="img1">
-    <h1>
-        <font size="15" face="segoe print">Алко.net</font>
-    </h1>
+    <div class="head-container">
+        <h1>
+            <font size="15" face="segoe print">Алко.net</font>
+        </h1>
+        <img src="res/left-img.png" class="img1">
+    </div>
 
     <div class="container">
-        <form action="#" method="get" enctype="multipart/form-data" id="form">
-            <div class="first_collum">
+        <div class="first_column">
+            <div>Текст </div>
+        </div>
+        <form id="form">
+            <div class="second_column">
                 <p>
                 <h2>Мы проводим анкетирование, пожалуйста пройдите опрос</h2>
                 </p>
                 <div class="text_form">
                     <p>Введите имя</p>
-                    <input placeholder="Иванов Иван" type="text" name="username" value=""><!--тег disabled блокирует поле-->
+                    <input placeholder="Иванов Иван" type="text" name="username"><!--тег disabled блокирует поле-->
                 </div>
                 <div class="text_form">
                     <p>Введите email</p>
-                    <input tabindex="1" placeholder="simple_email@mail.com" type="text" name="userpass" value=""><!-- tabindex на скоьлко пунктов прескочит формы нажав tab-->
+                    <input tabindex="1" placeholder="simple_email@mail.com" type="text" name="userpass"><!-- tabindex на скоьлко пунктов прескочит формы нажав tab-->
                 </div>
             </div>
-        <br>
-        <div>
-            Выберите ваш тип пива:
-            <p>
-                <input checked type="radio" name="beer" value="lager">Свелое
-                <br>
-                <input type="radio" name="beer" value="dark">Тёмное
-            </p>
-        </div>
+            <br>
 
-        <div>
-            <p>Выберите любымый(ые) бренд(ы) пива</p>
-            <p>
-                <input type="checkbox" name="box" value="">Corona
-                <br>
-                <input type="checkbox" name="box1" value="">Alivaria
-                <br>
-                <input type="checkbox" name="box2" value="">Weihenstephaner
-                <br>
-                <input type="checkbox" name="box3" value="">Paulaner
-                <br>
-                <input type="checkbox" name="box4" value="">Жигулёвское
-            </p>
-        </div>
-        <div>
-            Выберите фото вашего любимого пипа:<br>
-            <p>
-                <input type="file" name="img" value=""><!--Выбор файла-->
-            </p>
-        </div>
+            <div class="form">
 
-        <div>
-            <p>Опишите что-бы вы хотели добавить в разливное пиво</p>
-            <textarea name="text" cols="30" rows="10"></textarea>
-        </div>
-        <br>
-        <div>
-            <p>Какого цвета бутылку вы предпочитаете</p>
-            <select name="color" > <!--выпадающий список, с помощью атрибута multiply можно сделать множественную выборку зажав ctcl -->
-                <option value="red">Зеленая</option>
-                <option selected  value="blue">Прозрачная</option><!--selected элемент показывается первым в списке-->
-                <option value="green">Синяя</option>
-                <option value="white">Коричневая</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <button type="submit" onclick="form.addEventListener()">Отправить</button><!--submit - все данные отпраятся, reset поля очищаются-->
-            <button type="button" onclick="clearAllFormInputs()">Очистить</button>
-        </div>
+                <p>Выберите ваш тип пива:
+                    <div>
+                        <input checked type="radio" name="beer" value="lager">Свелое
+                    </div>
+                    <div>
+                        <input  type="radio" name="beer" value="dark">Тёмное <!--checked - значение выборки по умолчанию-->
+                    </div>
+                    <div>
+                        <input type="radio" name="beer" value="bottling">Разливное
+                    </div>
+                    <div>
+                        <input type="radio" name="beer" value="nofilter">Не фильтрованное
+                    </div>
+                </p>
+            </div>
+
+            <div class="form">
+                <p>Выберите любымый(ые) бренд(ы) пива</p>
+                <div>
+                    <input type="checkbox" name="box">Corona
+                </div>
+                <div>
+                    <input type="checkbox" name="box1">Alivaria
+                </div>
+                <div>
+                    <input type="checkbox" name="box2">Weihenstephaner
+                </div>
+                <div>
+                    <input type="checkbox" name="box3">Paulaner
+                </div>
+                <div>
+                    <input type="checkbox" name="box4">Жигулёвское
+                </div>
+            </div>
+            <div class="form">
+                Выберите фото вашего любимого пипа:<br>
+                <p>
+                    <input type="file" name="img"><!--Выбор файла-->
+                </p>
+            </div>
+
+            <div class="textarea">
+                <p>Опишите что-бы вы хотели добавить в разливное пиво</p>
+                <textarea name="text" cols="50" rows="10" placeholder="Впишите что нибудь )"></textarea>
+            </div>
+            <br>
+            <div class="select">
+                <p>Какого цвета бутылку вы предпочитаете</p>
+                <select name="color"> <!--выпадающий список, с помощью атрибута multiply можно сделать множественную выборку зажав ctcl -->
+                    <option value="red">Зеленая</option>
+                    <option selected  value="blue">Прозрачная</option><!--selected элемент показывается первым в списке-->
+                    <option value="green">Синяя</option>
+                    <option value="white">Коричневая</option>
+                </select>
+            </div>
+            <br>
+            <div class="select">
+                <button type="submit" onclick="form.addEventListener()">Отправить</button><!--submit - все данные отпраятся, reset поля очищаются-->
+                <button type="button" onclick="clearAllFormInputs()">Очистить</button>
+            </div>
         </form>
-
-        <div class="secound_collum">
-            <div>Текст </div>
-        </div>
-
         <div>
             <aside>
                 <p>Экономьте электричество</p>
@@ -93,6 +107,7 @@
             </aside>
         </div>
     </div>
+
     <footer>Конец</footer>
 
     <script src="index.js"></script>
