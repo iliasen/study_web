@@ -20,7 +20,7 @@
         <div class="first_column">
             <div>Текст </div>
         </div>
-        <form id="form">
+        <form id="form" method="get" action="result.html">
             <div class="second_column">
                 <p>
                 <h2>Мы проводим анкетирование, пожалуйста пройдите опрос</h2>
@@ -31,14 +31,13 @@
                 </div>
                 <div class="text_form">
                     <p>Введите email</p>
-                    <input tabindex="1" placeholder="simple_email@mail.com" type="text" name="userpass"><!-- tabindex на скоьлко пунктов прескочит формы нажав tab-->
+                    <input tabindex="1" placeholder="simple_email@mail.com" type="text" name="useremail"><!-- tabindex на скоьлко пунктов прескочит формы нажав tab-->
                 </div>
             </div>
             <br>
 
             <div class="form">
-
-                <p>Выберите ваш тип пива:
+                <p>Выберите ваш тип пива:</p>
                     <div>
                         <input checked type="radio" name="beer" value="lager">Свелое
                     </div>
@@ -51,10 +50,10 @@
                     <div>
                         <input type="radio" name="beer" value="nofilter">Не фильтрованное
                     </div>
-                </p>
+
             </div>
 
-            <div class="form">
+            <div class="form_checkbox">
                 <p>Выберите любымый(ые) бренд(ы) пива</p>
                 <div>
                     <input type="checkbox" name="box">Corona
@@ -72,8 +71,10 @@
                     <input type="checkbox" name="box4">Жигулёвское
                 </div>
             </div>
-            <div class="form">
+            <div class="form_file">
+                <p>
                 Выберите фото вашего любимого пипа:<br>
+                </p>
                 <p>
                     <input type="file" name="img"><!--Выбор файла-->
                 </p>
@@ -81,7 +82,7 @@
 
             <div class="textarea">
                 <p>Опишите что-бы вы хотели добавить в разливное пиво</p>
-                <textarea name="text" cols="50" rows="10" placeholder="Впишите что нибудь )"></textarea>
+                <textarea name="textarea" cols="50" rows="10" placeholder="Впишите что нибудь )"></textarea>
             </div>
             <br>
             <div class="select">
@@ -94,8 +95,8 @@
                 </select>
             </div>
             <br>
-            <div class="select">
-                <button type="submit" onclick="form.addEventListener()">Отправить</button><!--submit - все данные отпраятся, reset поля очищаются-->
+            <div class="buttons">
+                <button type="submit" id="submit">Отправить</button><!--submit - все данные отпраятся, reset поля очищаются-->
                 <button type="button" onclick="clearAllFormInputs()">Очистить</button>
             </div>
         </form>
