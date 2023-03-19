@@ -5,7 +5,7 @@
     <title>Алко.net</title>
     <link rel="icon" href="res\logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,12 +13,16 @@
         <h1>
             <font size="15" face="segoe print">Алко.net</font>
         </h1>
-        <img src="res/left-img.png" class="img1">
+        <img src="res/left-img.png" class="logo">
     </div>
 
     <div class="container">
         <div class="first_column">
-            <div>Текст </div>
+            <img class="img"  src="res/kind-2.jpg">
+            <img class="img1" src="res/kind-3.jpg.webp" height="300px">
+<!--            <img src="res/kind-4.jpg">-->
+            <img src="res/prod-4.jpg">
+<!--            <img src="res/prod-6.jpg" width=280px>-->
         </div>
         <form id="form" method="get" action="result.html">
             <div class="second_column">
@@ -82,7 +86,7 @@
 
             <div class="textarea">
                 <p>Опишите что-бы вы хотели добавить в разливное пиво</p>
-                <textarea name="textarea" cols="50" rows="10" placeholder="Впишите что нибудь )"></textarea>
+                <textarea id="ta" name="textarea" cols="50" rows="10" placeholder="Впишите что нибудь )"></textarea>
             </div>
             <br>
             <div class="select">
@@ -97,19 +101,40 @@
             <br>
             <div class="buttons">
                 <button type="submit" id="submit">Отправить</button><!--submit - все данные отпраятся, reset поля очищаются-->
-                <button type="button" onclick="clearAllFormInputs()">Очистить</button>
+                <button type="button" id="button" onclick="clearAllFormInputs()">Очистить</button>
             </div>
         </form>
         <div>
             <aside>
-                <p>Экономьте электричество</p>
-                <p>Хороший язык</p>
-                <p>Чья палка больше</p>
+                <h3>Факты о алкоголе</h3>
+                <div>
+                    <div>Алкоголь был одним из первых лекарств в истории человечества. Он использовался для обезболивания, дезинфекции и лечения разных заболеваний</div>
+                    <div>Алкоголь ускоряет метаболизм и помогает сжигать жир. Однако он также увеличивает аппетит и способствует накоплению жидкости в организме</div>
+                    <div>Алкоголь может изменять цвет кожи человека. При употреблении красного вина кожа может приобрести розовый оттенок, а при употреблении белого вина - желтый</div>
+                    <div>Алкоголь может повышать творческий потенциал человека. Исследования показали, что люди под воздействием алкоголя лучше решают задачи, требующие нестандартного мышления</div>
+                    <div>Самый крепкий алкогольный напиток в мире называется змеиный виски и производится в Юго-Восточной Азии. Он содержит до 80% спирта и змей или скорпионов</div>
+                    <div>Во время сухого закона в США некоторые люди пили спирт из автомобильных омывателей стекол, который содержал метанол и был смертельно опасен</div>
+
+                </div>
             </aside>
         </div>
     </div>
 
-    <footer>Конец</footer>
+    <footer>
+        <div class="container_footer">
+            <div class="logo">
+                <h1>Aлко.net</h1>
+            </div>
+            <div>The best solution for your needs</div>
+            <div class="contact">
+                <ul>
+                    <li>+1 (123) 456-7890</li>
+                    <li>@alco.com</li>
+                    <li>123 Main Street, New York, NY 10001</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>
