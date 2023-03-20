@@ -1,0 +1,149 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("res/pexels-chan-walrus-941864.jpg");
+    background-size: 100%,auto;
+}
+
+div.head-container{
+    display: flex;
+    margin: 10px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    color: #666666;
+    padding: 10px;
+}
+div.head-container h1{
+    flex:3;
+    text-align: center;
+    margin-right: 140px;
+
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 150px;
+    flex-shrink: initial;
+}
+
+div.main-container{
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+div.answer-container{
+    color: #f0f0f0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background: #b7472a;
+    padding: 10px;
+
+}
+
+div.persanal_data{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+div.data{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.name{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    flex:1;
+}
+
+div.email{
+    color: black;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    flex:1;
+}
+
+div.beer{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+div.box,div.box1,div.box2,div.box3,div.box4{
+    color: black;
+    display: inline;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+div.text_on_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.img_result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.textarea{
+    color: black;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+div.color{
+    display: inline;
+}
+
+div.margin{
+    margin: 20px auto ;
+}
+
+button{
+    border-radius: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 10px;
+    width: 130px;
+    height: 40px;
+
+}
+button a{
+
+    text-decoration: none;
+    border-bottom: 0px;
+    color: white;
+}
+

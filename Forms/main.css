@@ -1,67 +1,196 @@
 body{
-    width: 1800px;
-    height: 900px;
-    /*background-color: yellow;*/
+    width: 100vw;
+    height: 100vh;
+    background-image: url("res/bg_2.jpg.webp");
+    color: white;
 }
 
 div.container{
     display: flex;
-    margin: 10px    ;
+    margin: 10px;
+    justify-content: center;
 }
-
+div.head-container{
+    display: flex;
+    margin: 10px;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
 h1{
     color: darkgray;
-    width: 95%;
+    width: 100%;
     height: 100px;
     text-align: center;
+    padding-right: 200px;
 }
 
-footer{
+
+
+.logo {
     position: relative;
-    width: 95%;
-    height: 100px;
-    text-align: center;
-    margin: 40px 0 0 40px;
-}
-
-.img1 {
-    position: absolute;
+    display: flex;
     width: 200px;
     height: 150px;
-    margin: 10px;
-    /*margin-left: 200px;*/
+    margin-left: 40px;
 }
 
-div.first_collum{
-    /*background-color: dimgrey;*/
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+div.first_column{
+    width: 275px;
+    margin-right: 10px;
+    padding: 10px 10px 0;
+    justify-content: center;
+    background-color: #f0f0f0;
 }
 
-div.secound_collum{
-    width: 700px;
-    margin-left: 60px;
-    margin-right: 60px;
+.img{
+    height: 300px;
+}
+
+.img1{
+    height: 300px;
+}
+
+div.first_column:nth-child(3){
+    margin-bottom: 0;
+}
+
+img {max-width:100%;height:auto;margin-bottom: 10px}
+
+#form{
+    padding: 10px;
+    background-color: #b7472a;
+}
+
+div.second_column{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
 }
 
 .text_form{
     display: flex;
     justify-content: space-between;
     margin: 0px 10px 5px;
-    padding-right: 300px;
+    padding:0 100px;
+}
+
+div.form>p{
+    text-align: center;
+}
+
+div.form div{
+    padding-left: 255px;
+}
+div.form_checkbox{
+    text-align: center;
+}
+div.form_checkbox div{
+    display: flex;
+    align-items: start;
+    padding-left: 255px;
+}
+
+div.form_file{
+    text-align: center;
+}
+
+div.textarea{
+    text-align: center;
+}
+
+.select, .buttons{
+    text-align: center;
+}
+
+
+input,textarea{
+    Border-radius: 5px;
+}
+
+button {
+    Border-radius: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+
+footer{
+    Border-radius: 5px;
+    border: 1px solid dimgrey;
+    height: 50px;
+    margin:  0 11.5% 0 11.5%;
+    padding: 10px;
+    display: flex;
+}
+
+.container_footer {
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+
+}
+
+.logo h1 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.container_footer div {
+    width: 300px;
+    height: 40px;
+    padding-top: revert;
+    font-family: "Rage Italic", sans-serif;
+    font-size: 12px;
+    color: #666666;
+}
+
+div.contact{
+    padding-bottom: 10px;
 }
 
 aside {
-    background: #f0f0f0;
+    background-color: white;
     padding: 10px;
     width: 200px;
-    float: right;
+    height: 98%;
+    margin-left: 10px;
+    color: dimgrey;
+
 }
-div>h2{
+aside h3{
+    text-align: center;
+}
+aside div div{
+    border-radius: 2px;
+    border: 1px solid #666666;
+    margin: 6px;
+    padding: 5px;
+}
+aside div:last-child{
+    margin-bottom: 0px;
+}
+div > h2{
     margin-bottom: 20px;
     font-family: Candara;
-    color: dimgrey;
+    color:white;
 }
+
+
+
