@@ -5,7 +5,7 @@ console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 
 const username = urlParams.get('username')
-if (urlParams.get("username")!=="") {
+if (urlParams.get("username")!==null) {
     console.log(username);
     document.querySelector(".name").textContent = "Ваше имя: " + username
     // делаем что-то с параметром username
@@ -16,7 +16,7 @@ if (urlParams.get("username")!=="") {
 
 
 const useremail = urlParams.get('useremail')
-if (urlParams.get("useremail")!=="") {
+if (urlParams.get("useremail")!==null) {
     console.log(username);
     document.querySelector(".email").textContent = "Ваш email: " + useremail
 } else {
@@ -36,40 +36,56 @@ const box4 = urlParams.get('box4')
 //Проверка на присутствие пременной в странице
 if (urlParams.get('box') != null) {
     console.log(box);
-    document.querySelector(".box").textContent = "Corona"
+    document.querySelector(".box").textContent = "ㅤCorona"
 }
 else{
     document.querySelector(".box").textContent = ""
 }
 if (urlParams.get('box1') != null) {
     console.log(box1);
-    document.querySelector(".box1").textContent = "Alivaria"
+    document.querySelector(".box1").textContent = "ㅤAlivaria"
 }
 if (urlParams.get('box2') != null) {
     console.log(box2);
-    document.querySelector(".box2").textContent = "Weihenstephaner"
+    document.querySelector(".box2").textContent = "ㅤWeihenstephaner"
 }
 if (urlParams.get('box3') != null) {
     console.log(box3);
-    document.querySelector(".box3").textContent = "Paulaner"
+    document.querySelector(".box3").textContent = "ㅤPaulaner"
 }
 if (urlParams.get('box4') != null) {
     console.log(box4);
-    document.querySelector(".box4").textContent = "Жигулёвское"
+    document.querySelector(".box4").textContent = " Жигулёвское"
 }
 
+if((urlParams.get('box') == null)&&(urlParams.get('box1') == null)&&(urlParams.get('box2') == null)&&(urlParams.get('box3') == null)&&(urlParams.get('box4') == null)){
+    document.getElementById('brand').style.display = 'none';
+}
 
+const img = urlParams.get('img')
+if (urlParams.get("img")!=="") {
+    console.log(img);
+    document.querySelector(".img").textContent = "Вы прекрепили фотографию, спасибо мы постараемся подобрать лучшее для наших клиентов "
+    document.getElementById('again').style.display = 'none';// скрыть или показать кнопку
+} else {
+    document.querySelector(".img").textContent = "Вы не прекрепили фотографию, вы можете это сделать заполнив форму заново. Это поможет нам улучшить сервис"
+    document.getElementById('again').style.display = 'block';
+}
 const textarea = urlParams.get('textarea')
 if (urlParams.get("textarea")!=="") {
     console.log(textarea);
-    document.querySelector(".textarea").textContent = "Ваши пожелания: " + textarea
+    document.querySelector(".textarea").textContent = "Ваше пожелание: " + textarea
 } else {
     document.querySelector(".textarea").textContent = "Вы не захотели что-то желать"
 }
 
 const color= urlParams.get('color')
 console.log(color);
-document.querySelector(".color").textContent = "Вы выбрали цвет: " + color
+document.querySelector(".color").textContent = "Вы выбрали цвет бутылки: " + color+", отличный выбор !"
+
+
+
+
 
 
 // const username = urlParams.get('username')
