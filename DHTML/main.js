@@ -1,11 +1,15 @@
 $('#buttonRu').click(function(){translateRu();});
 
+var rus = []
+var eng = []
 function translateRu(){
 
     var sourceText = $('textarea#field_1').val();
     var sourceLang = 'ru';
     var targetLang = 'en';
     console.log(sourceText);
+
+    rus.push(sourceText)
 
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="+ sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
     //console.log(url);
@@ -23,7 +27,7 @@ function translateEn(){
     var sourceLang = 'en';
     var targetLang = 'ru';
     console.log(sourceText);
-
+    eng.push(sourceText)
     var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="+ sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
     //console.log(url);
 
@@ -58,7 +62,6 @@ select.addEventListener("change", function() {
 
             break;
         default:
-        // Делайте что-то для всех остальных значений
     }
 });
 
@@ -77,6 +80,113 @@ select.addEventListener("change", function() {
 
             break;
         default:
-        // Делайте что-то для всех остальных значений
     }
 });
+
+
+    // function createTable() {
+    //
+    //     document.getElementById("myTable").focus();
+    //     var table = document.createElement('table');
+    //     var tbody = document.createElement('tbody');
+    //     while (tbody.firstChild) {
+    //         tbody.removeChild(tbody.firstChild);
+    //     }
+    //     for (var i = 0; i < 1; i++) {
+    //         var tr = document.createElement('tr');
+    //
+    //         for (var j = 0; j < 1; j++) {
+    //             var td = document.createElement('td');
+    //             td.appendChild(document.createTextNode('Русский'));
+    //             tr.appendChild(td);
+    //         }
+    //         for (var j = 0; j < 1; j++) {
+    //             var td = document.createElement('td');
+    //             td.appendChild(document.createTextNode('English'));
+    //             tr.appendChild(td);
+    //         }
+    //         tbody.appendChild(tr);
+    //     }
+    //
+    //     var list = rus.join("<br>");
+    //     var last = eng.join("<br>");
+    //     for (var i = 0; i < 1; i++) {
+    //         var tr = document.createElement('tr');
+    //
+    //         for (var j = 0; j < 1; j++) {
+    //             var td = document.createElement('td');
+    //             td.innerHTML = list;
+    //             tr.appendChild(td);
+    //         }
+    //         tbody.appendChild(tr);
+    //         for (var j = 0; j < 1; j++) {
+    //             var td = document.createElement('td');
+    //             td.innerHTML = last;
+    //             tr.appendChild(td);
+    //         }
+    //         tbody.appendChild(tr);
+    //     }
+    //     table.appendChild(tbody);
+    //     document.getElementById('myTable').appendChild(table);
+    // }
+
+var button = document.getElementById("create");
+button.addEventListener("click", createTable)
+
+
+function createTable() {
+    // получаем элемент с id="myTable"
+    var container = document.getElementById("myTable");
+    // проверяем, есть ли уже таблица внутри него
+    var table = container.getElementsByTagName("table")[0];
+    // если нет, то создаем новую таблицу и добавляем ее в контейнер
+    if (!table) {
+        table = document.createElement("table");
+        container.appendChild(table);
+    }
+    // получаем tbody таблицы или создаем новый, если его нет
+    var tbody = table.getElementsByTagName("tbody")[0];
+    if (!tbody) {
+        tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+    }
+    // очищаем содержимое tbody
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
+    // создаем новые строки и ячейки
+    for (var i = 0; i < 1; i++) {
+        var tr = document.createElement('tr');
+
+        for (var j = 0; j < 1; j++) {
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode('Русский'));
+            tr.appendChild(td);
+        }
+        for (var j = 0; j < 1; j++) {
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode('English'));
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+
+    var list = rus.join("<br>");
+    var last = eng.join("<br>");
+    for (var i = 0; i < 1; i++) {
+        var tr = document.createElement('tr');
+
+        for (var j = 0; j < 1; j++) {
+            var td = document.createElement('td');
+            td.innerHTML = list;
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+        for (var j = 0; j < 1; j++) {
+            var td = document.createElement('td');
+            td.innerHTML = last;
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+}
