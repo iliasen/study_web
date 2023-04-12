@@ -12,28 +12,34 @@
 <div class="container">
 
     <form id="form">
+        <div id="input_container">
             <div>
                 <b>Имя:</b>
-                <input type="text" name="name" size=15>
+                <input type="text" name="Имя" size=15>
             </div>
             <div>
                 <b>Фамилия:</b>
-                <input name="fio" size=15>
+                <input name="Фамилия" size=15>
             </div>
             <div>
-                <b>Возраст:</b><input type="number" min="6" max="133" value="6" name="age" id="age">
+                <b>Возраст:</b><input type="number" min="6" max="133" value="6" name="Возраст" id="age">
             </div>
             <div>
-                <b>Телефон:</b><input type="tel" name="num" size=13>
+                <b>Телефон:</b><input type="tel" name="№ тел. " size=13>
             </div>
+        </div>
         <!-- Кнопки готовности и сброса -->
         <input type="submit" value="Отправить">
         <input type="reset" value="Сброс">
-        <input type="button" value="Доб. параметр" onclick="create()"  >
+        <input type="button" value="Доб. параметр" onclick="create()">
+        <input type="button" value="Удалить" onclick="del_call()">
     </form>
 </div>
 
 <div id="create"></div>
+<div id="call"></div>
+<div id="myTable"></div>
+
 <script src="main.js"></script>
 </body>
 </html>

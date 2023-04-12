@@ -26,6 +26,60 @@ function callbackFunction(event) {
     // const myObject = new User(fio,name,age,num)
     users.push(myObject);
     console.log(users);
+
+    // получаем элемент с id="myTable"
+    var container = document.getElementById("myTable");
+// проверяем, есть ли уже таблица внутри него
+    var table = container.getElementsByTagName("table")[0];
+// если нет, то создаем новую таблицу и добавляем ее в контейнер
+    if (!table) {
+        table = document.createElement("table");
+        container.appendChild(table);
+    }
+// получаем tbody таблицы или создаем новый, если его нет
+    var tbody = table.getElementsByTagName("tbody")[0];
+    if (!tbody) {
+        tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+    }
+// очищаем содержимое tbody
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
+// создаем новые строки и ячейки
+    var tr = document.createElement('tr');
+    var headers = ["ID", "Info"];
+    for (let header of headers) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode(header));
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+
+    for (let i = 0; i < users.length; i++) { // перебираем массив с объектами пользователей
+        var tr = document.createElement('tr');
+        var user = users[i];
+        var id = i + 1;
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode(id));
+        tr.appendChild(td);
+
+        var td = document.createElement('td');
+        //var info = JSON.stringify(user); // преобразуем объект в строку JSON
+        for (let key in user) { // перебираем свойства объекта user
+            let value = user[key]; // получаем значение по ключу key
+            if (key === "Возраст") {
+                value = value + " лет";
+            }
+            if (value == ""){
+                value = "-";
+            }
+            td.appendChild(document.createTextNode(`${key}` + ": " + `${value}`+", ")); // добавляем текст в ячейку
+        }
+        tr.appendChild(td);
+
+        tbody.appendChild(tr);
+    }
 }
 for (let i in users) {
     let user = users[i]; // получаем объект по индексу i
@@ -33,11 +87,8 @@ for (let i in users) {
         let value = user[key]; // получаем значение по ключу key
         console.log(key, value); // выводим ключ и значение в консоль
     }
+
 }
-
-
-
-
 
 function create() {
     var add = document.getElementById('create');
@@ -86,9 +137,9 @@ function create() {
 
 function add(){
     var div = document.getElementById('create');
-    div.setAttribute('dislpay','none')
+    div.setAttribute("style",'display:none')
     var select = document.getElementById("select")
-    var form = document.getElementById("form")
+    var container = document.getElementById("input_container")
     var input_name = document.getElementById("name")
     var new_input = document.createElement("input")
     var div = document.createElement('div')
@@ -115,5 +166,46 @@ function add(){
     });
 
     div.appendChild(new_input)
-    form.appendChild(div)
+    container.appendChild(div)
+}
+
+
+function del_call() {
+    const trees = ["redwood", "bay", "cedar", "oak", "maple"];
+    delete trees[3];
+    console.log(3 in trees); // false
+    for (let k in trees){
+        let l = k
+        console.log(k)
+    }
+    var add = document.getElementById('call');
+    add.setAttribute("style",'display:inline')
+    var form = add.getElementsByTagName("form")[0];
+// если нет, то создаем новую таблицу и добавляем ее в контейнер
+    if (!form) {
+        var form = document.createElement("form")
+        form.setAttribute("id","add_form")
+        var name = document.createElement("label")
+        var text = document.createTextNode("Введите имя поля: ")
+        var input = document.createElement("input")
+        input.setAttribute("id","name")
+        input.setAttribute('type','number')
+        name.appendChild(text)
+        form.appendChild(name)
+        form.appendChild(input)
+
+        var button = document.createElement('input')
+        button.setAttribute("type","button")
+        button.setAttribute("onclick","del()")
+        button.setAttribute("style","margin:10px")
+        button.setAttribute("value","Удалить запись")
+
+        form.appendChild(button)
+        add.appendChild(form)
+    }
+
+}
+function del(k) {
+    var div = document.getElementById('call');
+    div.setAttribute("style",'display:none')
 }
