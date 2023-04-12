@@ -12,27 +12,28 @@
 <div class="container">
 
     <form id="form">
-        <div>
-            <b>Имя:</b>
-            <input name="Name" size=20>
-        </div>
-        <div>
-            <b>Фамилия:</b>
-            <input name="Family" size=20>
-        </div>
-
-        <div>
-            <b>Возраст:</b><input name="Age" size=3 >
-        </div>
-        <div>
-            <b>Телефон:</b><input name="Phone" size=10>
-        </div>
+            <div>
+                <b>Имя:</b>
+                <input type="text" name="name" size=15>
+            </div>
+            <div>
+                <b>Фамилия:</b>
+                <input name="fio" size=15>
+            </div>
+            <div>
+                <b>Возраст:</b><input type="number" min="6" max="133" value="6" name="age" id="age">
+            </div>
+            <div>
+                <b>Телефон:</b><input type="tel" name="num" size=13>
+            </div>
         <!-- Кнопки готовности и сброса -->
-        <input type="submit" value="Готово">
+        <input type="submit" value="Отправить">
         <input type="reset" value="Сброс">
+        <input type="button" value="Доб. параметр" onclick="create()"  >
     </form>
-
 </div>
+
+<div id="create"></div>
 <script src="main.js"></script>
 </body>
 </html>
