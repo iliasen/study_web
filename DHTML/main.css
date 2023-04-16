@@ -1,0 +1,100 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("res/ground.jpg");
+    background-size: 100vw, 100vh;
+}
+
+header{
+    text-align: center;
+    font-family: "Harlow Solid Italic";
+    font-weight: lighter;
+    color: dimgrey;
+    font-family: segoe print;
+    margin: auto;
+    padding: 10px;
+}
+
+div.main-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px 10%;
+    background-color: brown;
+    width: auto ;
+    height: max-content;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+div.convert-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+textarea{
+    margin: 10px;
+    border-radius: 5px;
+    font-family: "Rage Italic";
+    font-size: 15px;
+    padding: 10px;
+    width: 275px;
+    height: 125px;
+}
+
+img.convert{
+    width: 50px;
+    height:50px;
+}
+
+select{
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: brown;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttons > button{
+    padding: 2px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: pink;
+    box-shadow:2px 2px 2px black;
+}
+
+#myTable{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+#myTable > table{
+    background-color: white;
+    text-align: center;
+    width: 300px;
+}
+#myTable > table > tr:first-child {
+    height: 20px !important;
+    font-size: large;
+    color: dimgrey;
+}
+#myTable > table > tr:not(:first-child){height: 50px}
+#myTable > table td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 50px;
+}
+#myTable > table td:last-child{
+    border-right: 0px solid black;
+    border-bottom: 1px solid black;
+}
+

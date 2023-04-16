@@ -1,0 +1,66 @@
+.container{display: flex;
+    justify-content: space-between;
+    width: auto;
+    min-width: 225px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkorange;
+}
+#input_container{
+    display: flex;
+    flex-direction: column;
+}
+.container div{margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container b{
+    margin-right: 10px;
+}
+h1{
+    margin: 10px;
+}
+#age{
+    width: 9.6em;
+}
+
+#create *{
+    margin: 10px;
+}
+
+#create{
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    color: rgb(255, 255, 255);
+    transition: .1s;
+}
+.modal-content {
+    background-color: white; /* задаем белый фон */
+    padding: 20px; /* задаем отступы */
+    border: 1px solid black; /* задаем черную рамку */
+    width: 80%; /* задаем ширину */
+    margin: 0 auto; /* центрируем по горизонтали */
+}
+#result{
+    display: flex;
+}
+table{border: 1px solid black;
+    text-align: center;
+}
+table td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table td:last-child{
+    border-right: 0px;
+}

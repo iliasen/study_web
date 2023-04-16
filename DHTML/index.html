@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Придумай название</title>
+    <link rel="icon" href="res/Logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<script src="http://www.google.com/jsapi?key=xxxxxxxxxxxxxxx>" type="text/javascript"></script>
+
+
+<body>
+    <header>
+        <h1>Ещё один конченый опросник</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="form-container">Введите текст для перевода</div>
+    </div>
+
+    <div class="convert-container">
+        <select name="user_profile_color_1" id="Select_1">
+            <option value="1">Синий</option>
+            <option value="2">Зеленый</option>
+            <option value="3">Желтый</option>
+        </select>
+        <textarea id="field_1" rows="5" cols="33"></textarea>
+        <img src="res/convert.png" class="convert">
+        <textarea id="field_2" rows="5" cols="33"></textarea>
+
+        <select name="user_profile_color_2" id="Select_2">
+            <option value="1">Синий</option>
+            <option value="2">Зеленый</option>
+            <option value="3">Желтый</option>
+        </select>
+    </div>
+    <br>
+
+    <div class="buttons">
+        <button id="buttonRu">Rus</button>
+        <button id="buttonEn">En</button>
+        <button id="create">Создать таблицу</button>
+    </div>
+
+    <div id="myTable"></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
