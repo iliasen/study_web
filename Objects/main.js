@@ -16,6 +16,9 @@ function callbackFunction(event) {
     const myFormData = new FormData(event.target); // создаем объект FormData из элемента формы
     const myObject = {};
     myFormData.forEach((value, key) => { // итерируем по ключам и значениям FormData
+        if (key === 'Возраст') { // если ключ равен 'Возраст'
+            value = Number(value); // преобразуем значение в число
+        }
         myObject[key] = value; // добавляем ключи и значения в новый объект
     });
     ////если бы создавал через класс
@@ -24,9 +27,11 @@ function callbackFunction(event) {
     // const age = myFormData.get("age")
     // const num = myFormData.get("num")
     // const myObject = new User(fio,name,age,num)
-    users.push(myObject);
-    //console.log(users);
-
+    users.push(myObject)
+    console.log(users);
+    create_table()
+}
+function create_table() {
     // получаем элемент с id="myTable"
     let container = document.getElementById("myTable");
 // проверяем, есть ли уже таблица внутри него
@@ -44,18 +49,20 @@ function callbackFunction(event) {
     }
     let clear_button = container.getElementsByTagName('button')[0];
     if(!clear_button){
-         let clear_button = document.createElement('button');
-        clear_button.id = "Сlear";
+        let clear_button = document.createElement('button');
+        clear_button.id = "clear";
         clear_button.textContent = "Очистить"
         clear_button.onclick=clear
-         container.appendChild(clear_button);
-        }
-    let check_button = container.getElementsByTagName('button')[1];
-    if(!check_button){
-        let check_button = document.createElement('button');
-        check_button.id = "Check";
-        check_button.textContent = "Sort"
-        container.appendChild(check_button);
+        container.appendChild(clear_button);
+    }
+
+    let find_button = container.getElementsByTagName('button')[1];
+    if(!find_button){
+        let find_button = document.createElement('button');
+        find_button.id = "find";
+        find_button.textContent = "Sort"
+        find_button.onclick=find
+        container.appendChild(find_button);
     }
 // очищаем содержимое tbody
     while (tbody.firstChild) {
@@ -86,7 +93,7 @@ function callbackFunction(event) {
             if (key === "Возраст") {
                 value = value + " лет";
             }
-            if (value == ""){
+            if (value === ""){
                 value = "-";
             }
             td.appendChild(document.createTextNode(`${key}` + ": " + `${value}`+", ")); // добавляем текст в ячейку
@@ -96,16 +103,29 @@ function callbackFunction(event) {
         tbody.appendChild(tr);
     }
 }
-for (let i in users) {
-    let user = users[i]; // получаем объект по индексу i
-    for (let key in user) { // перебираем свойства объекта user
-        let value = user[key]; // получаем значение по ключу key
-        //console.log(key, value); // выводим ключ и значение в консоль
-    }
 
-}
+let popup = document.querySelector('#create')
 
 function create() {
+    document.querySelector('#create_button').addEventListener('click', () => {
+        popup.style.cssText = `
+  display: block;
+  opacity: 0;`
+        setTimeout(() => {
+            popup.style.opacity = '1'
+        }, 1)
+    })
+
+
+    window.addEventListener('click', e => {
+        if(e.explicitOriginalTarget === popup) {
+            popup.style.opacity = 0
+            setTimeout(() => {
+                popup.style.display = 'none'
+            }, 301)
+        }
+    })
+
     let add = document.getElementById('create');
     add.setAttribute("style",'display:inline')
     let form = add.getElementsByTagName("form")[0];
@@ -162,28 +182,33 @@ function add(){
     let new_input = document.createElement("input")
     div = document.createElement('div')
     let b = document.createElement('b')
-
+    if(input_name.value !== ""){
     b.appendChild(document.createTextNode(input_name.value))
     div.appendChild(b)
     new_input.setAttribute("id","add_input")
     new_input.setAttribute("name",input_name.value)
-    //console.log("Привкет", select.value)
 
     switch(select.value) {
         case "1":
-            new_input.setAttribute("type", "text");
+            new_input.type="text"
+            new_input.size=15
             break;
         case "2":
-            new_input.setAttribute("type", "number");
+            new_input.type="number"
+            new_input.setAttribute("style","width: 9.6em")
             break;
         case "3":
-            new_input.setAttribute("type", "date");
+            new_input.type="date"
             break;
         default:
         }
 
     div.appendChild(new_input)
     container.appendChild(div)
+    }
+    else {
+        alert("Вы не указали имя поля !")
+    }
 }
 
 
@@ -221,28 +246,66 @@ function del() {
     let input = document.getElementById('del_input')
     users.splice(input.value-1,1)
 
+   create_table()
+}
+
+function clear() {
     // получаем элемент с id="myTable"
-    let container = document.getElementById("myTable");
-// проверяем, есть ли уже таблица внутри него
+    let container = document.getElementById('myTable');
+    // удаляем все дочерние элементы таблицы
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+    // обнуляем массив users
+    users = [];
+    let container_find = document.getElementById('result')
+    while (container_find.firstChild) {
+        container_find.removeChild(container_find.firstChild)
+    }
+}
+function find() {
+    let max = 0;
+    let min = Infinity; // бесконечность
+    for (let user of users) {
+        let age = user['Возраст']; // получаем возраст текущего объекта
+        if (age > max) {
+            max = age;
+        }
+        if (age < min) {
+            min = age;
+        }
+    }
+    let min_max = [max, min];
+    console.log(max);
+    console.log(min);
+
+    let container = document.getElementById('result')
+    container.setAttribute("style",'display:inline')
     let table = container.getElementsByTagName("table")[0];
-// если нет, то создаем новую таблицу и добавляем ее в контейнер
     if (!table) {
         table = document.createElement("table");
         container.appendChild(table);
     }
-// получаем tbody таблицы или создаем новый, если его нет
     let tbody = table.getElementsByTagName("tbody")[0];
     if (!tbody) {
         tbody = document.createElement("tbody");
         table.appendChild(tbody);
     }
+    let exit_button = container.getElementsByTagName('button')[0];
+    if(!exit_button){
+        let exit_button = document.createElement('button');
+        exit_button.textContent = "X"
+        exit_button.setAttribute('style','border-radius: 20px')
+        exit_button.onclick=exit
+        container.appendChild(exit_button);
+    }
+
 // очищаем содержимое tbody
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
-// создаем новые строки и ячейки
     let tr = document.createElement('tr');
-    let headers = ["ID", "Info"];
+    let headers = ["max", "min"];
     for (let header of headers) {
         let td = document.createElement('td');
         td.appendChild(document.createTextNode(header));
@@ -250,42 +313,15 @@ function del() {
     }
     tbody.appendChild(tr);
 
-    for (let i = 0; i < users.length; i++) { // перебираем массив с объектами пользователей
-        let tr = document.createElement('tr');
-        let user = users[i];
-        let id = i + 1;
+    let tr1 = document.createElement('tr');
+
+    for (let i of min_max) {
         let td = document.createElement('td');
-        td.appendChild(document.createTextNode(id));
-        tr.appendChild(td);
-
-        td = document.createElement('td');
-        //let info = JSON.stringify(user); // преобразуем объект в строку JSON
-        for (let key in user) { // перебираем свойства объекта user
-            let value = user[key]; // получаем значение по ключу key
-            if (key === "Возраст") {
-                value = value + " лет";
-            }
-            if (value == ""){
-                value = "-";
-            }
-            td.appendChild(document.createTextNode(`${key}` + ": " + `${value}`+", ")); // добавляем текст в ячейку
-        }
-        tr.appendChild(td);
-
-        tbody.appendChild(tr);
+        td.appendChild(document.createTextNode(i));
+        tr1.appendChild(td);
     }
+    tbody.appendChild(tr1);
 }
-
-function clear(){
-    // получаем элемент с id="myTable"
-    console.log('DIvvvv')
-    let container = document.getElementById('myTable');
-    // удаляем все дочерние элементы таблицы
-    while (container.firstChild){
-        container.removeChild(container.firstChild)
-    }
-    //container.innerHTML = " ";
-    // обнуляем массив users
-    users = [];
-}
-// document.getElementById("Clear").onclick = clear;
+function exit(){
+    let container = document.getElementById('result')
+    container.setAttribute("style",'display:none')}

@@ -25,13 +25,13 @@
                 <b>Возраст:</b><input type="number" min="6" max="133" value="6" name="Возраст" id="age">
             </div>
             <div>
-                <b>Телефон:</b><input type="tel" name="№ тел. " size=13>
+                <b>Телефон:</b><input type="tel" name="№ тел. " size=15>
             </div>
         </div>
         <!-- Кнопки готовности и сброса -->
         <input type="submit" value="Отправить">
         <input type="reset" value="Сброс">
-        <input type="button" value="Доб. параметр" onclick="create()">
+        <input type="button" value="Доб. параметр" id="create_button" onclick="create()">
         <input type="button" value="Удалить" onclick="del_call()">
     </form>
 </div>
@@ -39,7 +39,7 @@
 <div id="create"></div>
 <div id="call"></div>
 <div id="myTable"></div>
-
+<div id="result"></div>
 <script src="main.js"></script>
 </body>
 </html>
