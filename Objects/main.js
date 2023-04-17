@@ -104,12 +104,12 @@ function create_table() {
     }
 }
 
-let popup = document.querySelector('#create')
+let popup = document.querySelector('#create-container')
 
 function create() {
     document.querySelector('#create_button').addEventListener('click', () => {
         popup.style.cssText = `
-  display: block;
+  display: flex;
   opacity: 0;`
         setTimeout(() => {
             popup.style.opacity = '1'
@@ -127,7 +127,7 @@ function create() {
     })
 
     let add = document.getElementById('create');
-    add.setAttribute("style",'display:inline')
+    // add.setAttribute("style",'display:inline')
     let form = add.getElementsByTagName("form")[0];
     if(!form){
         let form = document.createElement("form")
@@ -174,7 +174,7 @@ function create() {
 }
 
 function add(){
-    let div = document.getElementById('create');
+    let div = document.getElementById('create-container');
     div.setAttribute("style",'display:none')
     let select = document.getElementById("select")
     let container = document.getElementById("input_container")
@@ -211,10 +211,29 @@ function add(){
     }
 }
 
-
+let callback = document.querySelector('#call-del')
 function del_call() {
+    document.querySelector('#del-button').addEventListener('click', () => {
+        callback.style.cssText = `
+  display: flex;
+  opacity: 0;`
+        setTimeout(() => {
+            callback.style.opacity = '1'
+        }, 1)
+    })
+
+
+    window.addEventListener('click', e => {
+        if(e.explicitOriginalTarget === callback) {
+            callback.style.opacity = 0
+            setTimeout(() => {
+                callback.style.display = 'none'
+            }, 301)
+        }
+    })
+
+
     let add = document.getElementById('call');
-    add.setAttribute("style",'display:inline')
     let form = add.getElementsByTagName("form")[0];
     if (!form) {
         let form = document.createElement("form")
@@ -240,13 +259,20 @@ function del_call() {
 
 }
 function del() {
-    let div = document.getElementById('call');
+    let div = document.getElementById('call-del');
     div.setAttribute("style",'display:none')
-    // let form = div.getElementsByTagName('form')
     let input = document.getElementById('del_input')
-    users.splice(input.value-1,1)
+    if(Number(input.value)!==0){
+    users.splice(Number(input.value-1),1)
 
-   create_table()
+        if(users === []){
+            clear()
+        }
+        else{create_table()}
+    }
+    else {
+        alert("ВЫ ничего не ввели")
+    }
 }
 
 function clear() {
@@ -263,7 +289,33 @@ function clear() {
         container_find.removeChild(container_find.firstChild)
     }
 }
+
+
+let result = document.querySelector('#result-container')
+
+
 function find() {
+
+    document.querySelector('#find').addEventListener('click', () => {
+        result.style.cssText = `
+  display: flex;
+  opacity: 0;`
+        setTimeout(() => {
+            result.style.opacity = '1'
+        }, 1)
+    })
+
+
+    window.addEventListener('click', e => {
+        if(e.explicitOriginalTarget === result) {
+            result.style.opacity = 0
+            setTimeout(() => {
+                result.style.display = 'none'
+            }, 301)
+        }
+    })
+
+
     let max = 0;
     let min = Infinity; // бесконечность
     for (let user of users) {
@@ -280,7 +332,29 @@ function find() {
     console.log(min);
 
     let container = document.getElementById('result')
-    container.setAttribute("style",'display:inline')
+    container.setAttribute("style",'display:flex;flex-direction:column;')
+    let div = container.getElementsByTagName('div')[0]
+    if(!div){
+        div=document.createElement('div')
+        container.setAttribute("style",'display:flex;')
+        container.appendChild(div)
+    }
+    let exit_button = container.getElementsByTagName('button')[0];
+    if(!exit_button){
+        let exit_button = document.createElement('button');
+        exit_button.textContent = "X"
+        exit_button.setAttribute('style','border-radius: 50%;box-shadow: 0 3px 20px rgba(0,0,0,.25);cursor: pointer;margin: 10px;')
+        exit_button.onclick=exit
+        div.appendChild(exit_button);
+    }
+    let head = container.getElementsByTagName('h3')[0]
+    if(!head){
+        head = document.createElement("h3");
+        head.textContent='Максимальный и минимальный возраст'
+        div.appendChild(head);
+    }
+
+
     let table = container.getElementsByTagName("table")[0];
     if (!table) {
         table = document.createElement("table");
@@ -291,14 +365,7 @@ function find() {
         tbody = document.createElement("tbody");
         table.appendChild(tbody);
     }
-    let exit_button = container.getElementsByTagName('button')[0];
-    if(!exit_button){
-        let exit_button = document.createElement('button');
-        exit_button.textContent = "X"
-        exit_button.setAttribute('style','border-radius: 20px')
-        exit_button.onclick=exit
-        container.appendChild(exit_button);
-    }
+
 
 // очищаем содержимое tbody
     while (tbody.firstChild) {
@@ -323,5 +390,5 @@ function find() {
     tbody.appendChild(tr1);
 }
 function exit(){
-    let container = document.getElementById('result')
+    let container = document.getElementById('result-container')
     container.setAttribute("style",'display:none')}

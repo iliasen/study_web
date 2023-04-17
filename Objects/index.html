@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>О А Ещё анкета</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="res/Logo.jpg" type="icon/x">
 </head>
 <body>
 
@@ -32,14 +33,20 @@
         <input type="submit" value="Отправить">
         <input type="reset" value="Сброс">
         <input type="button" value="Доб. параметр" id="create_button" onclick="create()">
-        <input type="button" value="Удалить" onclick="del_call()">
+        <input type="button" value="Удалить" id="del-button" onclick="del_call()">
     </form>
 </div>
 
-<div id="create"></div>
-<div id="call"></div>
+<div id="create-container">
+    <div id="create"></div>
+</div>
+<div id="call-del">
+    <div id="call"></div>
+</div>
 <div id="myTable"></div>
-<div id="result"></div>
+<div id="result-container">
+    <div id="result"></div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

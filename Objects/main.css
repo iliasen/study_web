@@ -1,3 +1,15 @@
+body{
+    background-image: url("res/pexels-rovenimagescom-949587.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+body h1 {
+    color: white;
+    font-family: "Segoe Print";
+}
+
 .container{display: flex;
     justify-content: space-between;
     width: auto;
@@ -17,6 +29,7 @@
     justify-content: space-between;
 }
 
+
 .container b{
     margin-right: 10px;
 }
@@ -31,7 +44,7 @@ h1{
     margin: 10px;
 }
 
-#create{
+#create-container,#call-del,#result-container{
     background: rgba(0, 0, 0, .5);
     position: fixed;
     left: 0;
@@ -43,18 +56,42 @@ h1{
     color: rgb(255, 255, 255);
     transition: .1s;
 }
-.modal-content {
-    background-color: white; /* задаем белый фон */
-    padding: 20px; /* задаем отступы */
-    border: 1px solid black; /* задаем черную рамку */
-    width: 80%; /* задаем ширину */
-    margin: 0 auto; /* центрируем по горизонтали */
+#create,#call,#result{
+    padding: 10px;
+    background-color: darkorange;
+    border-radius: 5px;
+    width: 210px;
+    position: relative;
+    margin: auto;
+    vertical-align: middle
 }
+
 #result{
+    width: auto;
     display: flex;
 }
+
+#result table{
+    background-color: white;
+    color: black;
+}
+
+#call{
+    width: auto;
+}
+#myTable button{
+    margin: 10px;
+    background-color: pink;
+    border: 1px solid brown;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px;
+}
+
 table{border: 1px solid black;
     text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
 }
 table td{
     border-right: 1px solid black;
