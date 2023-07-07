@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    font-family: 'Arial';
+}
+
+.container{
+    padding: 0 100px;
+    background-color: #1F2937;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    color: #F2F2F2
+}
+
+.header a{
+    margin-left: 20px;
+    color: darkgray;
+}
+
+
+.section_1{
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+.section_1 h1{
+    color: #F9FAF8;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.section_1_content{
+    width: 500px;
+}
+
+.section_1_content h1{
+    margin: 0;
+}
+
+.section_1_content span{
+    color: #FFF;
+}
+
+.section_1_content button{
+    margin-top: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: dodgerblue;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 8px 36px;
+}
+
+.main_img{
+    width: 450px;
+    background-color: darkgray;
+    margin-left: 100px;
+}
