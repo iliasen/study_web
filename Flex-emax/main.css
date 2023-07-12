@@ -3,10 +3,11 @@ body{
     font-family: 'Arial';
 }
 
-.container{
-    padding: 0 100px;
+.containerSection_1{
+    padding: 10px 100px;
     background-color: #1F2937;
 }
+
 
 .header{
     display: flex;
@@ -15,15 +16,30 @@ body{
     color: #F2F2F2
 }
 
+.logo{
+    width: 40px;
+    height: 40px;
+}
+
+.header > div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .header a{
     margin-left: 20px;
     color: darkgray;
+    cursor: pointer;
 }
 
+.header a:hover{
+    color: dimgray;
+}
 
 .section_1{
     margin-top: 80px;
-    margin-bottom: 0px;
+    padding-bottom: 80px;
 }
 
 .section_1 h1{
@@ -57,10 +73,129 @@ body{
     font-size: 16px;
     font-weight: 550;
     padding: 8px 36px;
+    cursor: pointer;
+}
+
+.section_1_content button:hover{
+    background-color: blue;
 }
 
 .main_img{
     width: 450px;
     background-color: darkgray;
-    margin-left: 100px;
+    margin-left: 140px;
+    background-image: url("./res/benjamin-franklin.jpg");
+    background-size: cover;
+    border: 3px solid dimgray;
+    background-repeat: no-repeat;
+}
+
+
+.section_2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.section_2 h1{
+    font-size: 36px;
+    color: #1F2937;
+
+}
+
+.boxContainer{
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.box{
+    cursor: pointer;
+    border: 4px solid dodgerblue;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.box:hover,.box:hover ~div{
+    scale: 1.1;
+    color: #1F2937;
+}
+
+.box ~ div{
+    color: darkgray;
+    text-align: center;
+}
+.Leo, .Nikolay, .Albert, .Ernesto{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Leo{
+    background-image: url("./res/Leo.jpg");
+}
+
+.Nikolay{
+    background-image: url("./res/Nikolai.jpg");
+}
+
+.Albert{
+    background-image: url("./res/Ejnshtejn.jpg");
+}
+
+.Ernesto{
+    background-image: url("./res/Chigevara.jpg");
+}
+
+.section_3{
+    background-color: #E5E7EB;
+    font: 36px light Italic;
+    padding: 100px 100px;
+}
+
+.callContainer{
+    display: flex;
+    justify-content: center;
+    padding: 120px 200px;
+}
+
+.call{
+    width: 100%;
+    height: auto;
+    background-color: dodgerblue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    color: #F2F2F2;
+    padding: 23px;
+    gap: 100px
+}
+
+.call button{
+    height: 40px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    border: 4px solid #F2F2F2;
+    color: #F2F2F2;
+    cursor: pointer;
+    padding: 4px 16px;
+}
+
+.call button:hover{
+    border: 4px solid darkgrey;
+    color: darkgrey;
+}
+
+footer{
+    background-color: #1F2937;
+    text-align: center;
+    padding: 10px;
+    color: darkgrey;
 }
