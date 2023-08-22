@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fec87db-0dc3-4523-91d6-e26e696ae59f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Functions/Ex 2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Functions/Ex1/function-library.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Functions/Ex1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fizz Buzz/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fizz Buzz/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,7 +44,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -74,6 +72,7 @@
       <workItem from="1691959060577" duration="64000" />
       <workItem from="1691959132267" duration="222000" />
       <workItem from="1691959557852" duration="1696000" />
+      <workItem from="1692733172760" duration="3124000" />
     </task>
     <servers />
   </component>
