@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fec87db-0dc3-4523-91d6-e26e696ae59f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Fizz Buzz/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fizz Buzz/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CatchErrors/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Fizz Buzz/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fizz Buzz/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,17 +18,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file:///usr/lib/golang" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2MUZosf95s3N5XZanghVibjnE4f" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,13 +43,20 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Work/git/Productivity-app",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/home/iliasen/Work/study_web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,10 +85,14 @@
       <workItem from="1691959132267" duration="222000" />
       <workItem from="1691959557852" duration="1696000" />
       <workItem from="1692733172760" duration="3124000" />
+      <workItem from="1693169580065" duration="1764000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

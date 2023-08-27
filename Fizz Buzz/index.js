@@ -1,10 +1,11 @@
 let value
-let mass = []
+let mass
 
 function getFunc(e) {
+    mass = []
     e.preventDefault();
     value = document.getElementById('value').value;
-    console.log(value);
+
 
     for(let i = 1; i <= value; i++)
     if(i % 3 === 0){
