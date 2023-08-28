@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fec87db-0dc3-4523-91d6-e26e696ae59f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CatchErrors/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Fizz Buzz/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fizz Buzz/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatchErrors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CatchErrors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Fizz Buzz/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fizz Buzz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Fizz Buzz/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -29,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -52,14 +59,21 @@
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "/home/iliasen/Work/study_web",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Games" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,7 +99,8 @@
       <workItem from="1691959132267" duration="222000" />
       <workItem from="1691959557852" duration="1696000" />
       <workItem from="1692733172760" duration="3124000" />
-      <workItem from="1693169580065" duration="1764000" />
+      <workItem from="1693169580065" duration="2193000" />
+      <workItem from="1693206939322" duration="7381000" />
     </task>
     <servers />
   </component>

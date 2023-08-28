@@ -1,0 +1,28 @@
+#roundCount{
+    margin-bottom: 7px;
+}
+
+#selectID{
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+#selectID *{
+    border-radius: 10px;
+    background-color: #3e8e41;
+}
+button {
+    border-radius: 7px;
+    border: none;
+    background-color: #5995DA;
+    font-family: "Rage Italic", sans-serif;
+    font-size: 16px;
+    padding: 4px 12px;
+}
+button:hover{
+    background-color: dodgerblue;
+    scale: 1.0125;
+}
+
+p{
+    color: dimgray;
+}
