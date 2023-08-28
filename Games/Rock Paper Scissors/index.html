@@ -7,9 +7,9 @@
 </head>
 <body>
     <h2>Выберите ваш предмет</h2>
-    <div id="roundCount"></div>
+        <p>!Примечание игра ведётся до 5 раундов</p>
 
-    <select id="selectID">
+    <select id="selectID" onchange="changeImage()">
 
         <option value="1">Камень</option>
 
@@ -18,13 +18,23 @@
         <option value="3">Бумага</option>
 
     </select>
-
     <button onclick="letPlay()">Отправить</button>
 
-    <p>!Примечание игра играется до 5 раундов</p>
 
-    <div id = "score"/>
-    <div id = "status"/>
+
+    <div>
+        <div id="roundCount"></div>
+        <div id = "score"></div>
+
+        <div class="versus">
+            <img src="res/icons8-rock-96.png" id="userSelectView">
+            VS
+            <img src="res/icons8-roll-of-paper-96.png" id="computerSelectView">
+        </div>
+
+        <div id = "status"></div>
+    </div>
+
     <script src="main.js"/>
 </body>
 </html>

@@ -3,9 +3,25 @@ let computerData
 let globalCount= 0
 let userCount = 0
 let computerCount = 0
-let roundCount = document.getElementById('roundCount')
-let score = document.getElementById("score")
-let status = document.getElementById("status")
+const roundCount = document.getElementById('roundCount')
+const score = document.getElementById("score")
+const status = document.getElementById("status")
+// const versus = document.getElementsByClassName("versus")[0]
+
+
+function changeImage(){
+    userData = Number(document.getElementById("selectID").value) // оставить Number
+    let userSelectView = document.getElementById("userSelectView")
+    switch (userData){ // убрать value
+        case 1: userSelectView.setAttribute("src","res/icons8-rock-96.png")
+            break
+        case 2: userSelectView.setAttribute("src","res/icons8-scissors-96.png")
+            break
+        case 3: userSelectView.setAttribute("src","res/icons8-roll-of-paper-96.png")
+            break
+    }
+}
+
 
 function letPlay(){
     if(globalCount<5){
@@ -15,6 +31,7 @@ function letPlay(){
 
         switch (userData){
             case 1:
+
                 if(userData === computerData){
                     console.log("Ничья")
                     status.innerHTML = "Ничья"
@@ -59,10 +76,11 @@ function letPlay(){
                     status.innerHTML = "Вы выиграли раунд"
                 }
                 break
+            default: status.innerHTML = "Вы не выбрали предмет"
         }
         globalCount++
         roundCount.innerHTML ="Раунд: " + globalCount
-        score.innerText = userCount + ":" + computerCount
+        score.innerText = userCount + " : " + computerCount
         if(globalCount === 5){
             roundCount.innerHTML ="Раунд: " + globalCount + ". Время подводить итоги"
             {if(userCount > computerCount) alert('Вы выиграли !')
