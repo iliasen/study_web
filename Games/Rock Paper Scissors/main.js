@@ -6,12 +6,14 @@ let computerCount = 0
 const roundCount = document.getElementById('roundCount')
 const score = document.getElementById("score")
 const status = document.getElementById("status")
-// const versus = document.getElementsByClassName("versus")[0]
+const battle = document.getElementById("battle")
 
 
 function changeImage(){
-    userData = Number(document.getElementById("selectID").value) // оставить Number
     let userSelectView = document.getElementById("userSelectView")
+    let computerSelectView = document.getElementById("computerSelectView")
+    battle.setAttribute("style" ,"display:block")
+    computerData = Math.floor(Math.random() *3) + 1
     switch (userData){ // убрать value
         case 1: userSelectView.setAttribute("src","res/icons8-rock-96.png")
             break
@@ -20,15 +22,25 @@ function changeImage(){
         case 3: userSelectView.setAttribute("src","res/icons8-roll-of-paper-96.png")
             break
     }
+    switch (computerData){ // убрать value
+        case 1: computerSelectView.setAttribute("src","res/icons8-rock-96.png")
+            break
+        case 2: computerSelectView.setAttribute("src","res/icons8-scissors-96.png")
+            break
+        case 3: computerSelectView.setAttribute("src","res/icons8-roll-of-paper-96.png")
+            break
+    }
 }
 
+function setUserData(data){
+    userData = data
+    letPlay()
+}
 
 function letPlay(){
     if(globalCount<5){
-        userData = Number(document.getElementById("selectID").value)
-        computerData = Math.floor(Math.random() *3) + 1
+        changeImage()
         console.log("Userdata: " + userData ,"ComputerData: " + computerData)
-
         switch (userData){
             case 1:
 
@@ -81,10 +93,12 @@ function letPlay(){
         globalCount++
         roundCount.innerHTML ="Раунд: " + globalCount
         score.innerText = userCount + " : " + computerCount
+
         if(globalCount === 5){
             roundCount.innerHTML ="Раунд: " + globalCount + ". Время подводить итоги"
-            {if(userCount > computerCount) alert('Вы выиграли !')
-            else alert('Вы проиграли 😐')
+            if(userCount === computerCount) alert("Ничья")
+            else{if(userCount > computerCount) alert('Вы выиграли !')
+                else alert('Вы проиграли 😐')
             }
         }
     }

@@ -4,28 +4,38 @@
     margin: 16px 0;
 }
 
-#selectID{
-    padding: 5px 10px;
-    border-radius: 7px;
-}
-#selectID *{
-    border-radius: 10px;
-    background-color: #3e8e41;
-}
-button {
-    border-radius: 7px;
-    border: none;
-    background-color: #5995DA;
-    font-family: "Rage Italic", sans-serif;
-    font-size: 16px;
-    padding: 4px 12px;
-}
-
 #score, #status{
     text-align: center;
     font-size: 25px;
     margin: 20px 0;
 }
+
+.weapon{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.weapon img{
+    animation: activeButton;
+    border: 2px solid #1F2937;
+    cursor: pointer;
+    padding: 20px;
+    scale: 1.5;
+    transition: all 0.4s ease;
+
+}
+
+.weapon img:hover{
+    scale: 1.6;
+    box-shadow: 0 0 20px 1px;
+}
+
+#battle{
+    display: none;
+}
+
 
 .versus{
     display: flex;
@@ -37,11 +47,16 @@ button {
 .versus img{
     scale: 1.5;
 }
-button:hover{
-    background-color: dodgerblue;
-    scale: 1.0125;
-}
 
 p{
     color: dimgray;
+}
+
+@keyframes activeButton {
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1.6);
+    }
 }

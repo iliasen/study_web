@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fec87db-0dc3-4523-91d6-e26e696ae59f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/res/icons8-rock-96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/res/icons8-roll-of-paper-96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/res/icons8-scissors-96.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Rock Paper Scissors/index.html" afterDir="false" />
@@ -102,7 +99,13 @@
       <workItem from="1692733172760" duration="3124000" />
       <workItem from="1693169580065" duration="2193000" />
       <workItem from="1693206939322" duration="7690000" />
-      <workItem from="1693227450649" duration="7113000" />
+      <workItem from="1693227450649" duration="7949000" />
+      <workItem from="1693250720971" duration="2466000" />
+      <workItem from="1693292321291" duration="872000" />
+      <workItem from="1693304015854" duration="8000" />
+      <workItem from="1693308755414" duration="1939000" />
+      <workItem from="1693339092428" duration="698000" />
+      <workItem from="1693411928336" duration="1715000" />
     </task>
     <servers />
   </component>
