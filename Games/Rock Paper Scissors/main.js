@@ -14,7 +14,7 @@ function changeImage(){
     let computerSelectView = document.getElementById("computerSelectView")
     battle.setAttribute("style" ,"display:block")
     computerData = Math.floor(Math.random() *3) + 1
-    switch (userData){ // убрать value
+    switch (userData){
         case 1: userSelectView.setAttribute("src","res/icons8-rock-96.png")
             break
         case 2: userSelectView.setAttribute("src","res/icons8-scissors-96.png")
@@ -22,7 +22,7 @@ function changeImage(){
         case 3: userSelectView.setAttribute("src","res/icons8-roll-of-paper-96.png")
             break
     }
-    switch (computerData){ // убрать value
+    switch (computerData){
         case 1: computerSelectView.setAttribute("src","res/icons8-rock-96.png")
             break
         case 2: computerSelectView.setAttribute("src","res/icons8-scissors-96.png")
@@ -36,6 +36,7 @@ function setUserData(data){
     userData = data
     letPlay()
 }
+
 
 function letPlay(){
     if(globalCount<5){
@@ -96,10 +97,27 @@ function letPlay(){
 
         if(globalCount === 5){
             roundCount.innerHTML ="Раунд: " + globalCount + ". Время подводить итоги"
-            if(userCount === computerCount) alert("Ничья")
-            else{if(userCount > computerCount) alert('Вы выиграли !')
-                else alert('Вы проиграли 😐')
+            if(userCount === computerCount) showResult("Ничья")
+            else{if(userCount > computerCount) showResult('Вы выиграли !')
+                else showResult('Вы проиграли 😐')
             }
         }
     }
+}
+
+function showResult(string){
+    let result = document.getElementById('result')
+    let status = result.getElementsByTagName("div")[0]
+    result.setAttribute("style" ,"display:flex")
+    status.innerHTML =  string
+}
+
+function reset(){
+    globalCount=0
+    userCount=0
+    computerCount = 0
+    battle.setAttribute("style" ,"display:none")
+    let result = document.getElementById('result')
+    // let status = result.getElementsByTagName("div")[0]
+    result.setAttribute("style" ,"display:none")
 }
